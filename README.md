@@ -1,0 +1,2 @@
+# IlPostFetcher
+ Simple news fetcher
