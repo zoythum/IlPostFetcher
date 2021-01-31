@@ -18,10 +18,10 @@ def generate_tables():
 
 	cwd = os.getcwd()
 
-	with open(cwd + 'post_html', 'w') as f:
+	with open(cwd + '/post_html', 'w') as f:
 	    f.write(html)
 
-	response = urlopen('file://' + cwd + 'post_html')
+	response = urlopen('file://' + cwd + '/post_html')
 	htmlparser = etree.HTMLParser()
 	tree = etree.parse(response, htmlparser)
 
@@ -50,7 +50,7 @@ def generate_tables():
 
 	console.print(articles_table)
 
-	os.remove(cwd + "post_html")
+	os.remove(cwd + "/post_html")
 
 def should_fetch(delta, lastfetch):
 	try:
